@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #include <string>
+#include <vector>
 #include "Object.hpp"
 
 using FString = std::string;
@@ -35,6 +36,10 @@ public:
     void MoveDown();
     void MoveLeft();
     void MoveRight();
+    int InitialStrenth();
+    int InitialIntelligence();
+    int InitialStamina();
+    void InventoryInitialization(std::vector<Object>);
     
     
 private:
@@ -45,6 +50,7 @@ private:
     void SetStrength(int x);
     void SetIntelligence(int x);
     void SetStamina(int x);
+    static constexpr int statPoints = 20;
 
 };
 
